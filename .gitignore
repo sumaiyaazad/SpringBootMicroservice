@@ -1,2 +1,6 @@
 target/
 *.properties
+.mvn/
+mvnw
+mvnw.cmd
+
