@@ -1,5 +1,7 @@
 package com.taaha.currencyexchangeservice;
 
+import com.taaha.currencyexchangeservice.CurrencyExchangeRepository;
+import com.taaha.currencyexchangeservice.CurrencyExchange;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
+
 
 @RestController
 public class CurrencyExchangeController {
@@ -20,7 +23,7 @@ public class CurrencyExchangeController {
 	
 	@Autowired
 	private CurrencyExchangeRepository repository;
-	
+
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyExchange retrieveExchangeValue
 		(@PathVariable String from, @PathVariable String to){
